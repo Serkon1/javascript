@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello title</h1>
+    <script>
+        // alert("Hello world");
+        console.log("Hello world");
+    </script>
+    <script src="index.js"></script>
+    <p>Hello body</p>
+    <button onclick="console.log('button clicked');document.body.style.backgroundColor='red'">Это кнопка</button>
+    <div class="container" id="root"></div>
+    <div class="counter">
+        <button onclick="document.querySelector('#count').value--;">-</button>
+        <input id="count" value="0" type="text" min="0">
+        <button onclick="countUp()">+</button>
+    </div>
+    <div class="counter">
+        <button onclick="document.querySelector('#count').value--;">-</button>
+        <input id="count" value="0" type="text" min="0">
+        <button onclick="countUp()">+</button>
+    </div>
+    <div class="counter">
+        <button onclick="document.querySelector('#count').value--;">-</button>
+        <input id="count" value="0" type="text" min="0">
+        <button onclick="countUp()">+</button>
+    </div>
+
+    <script>
+        function countUp() {
+            let val = document.querySelector("#count").value;
+            console.log(val)
+            val++;
+            document.querySelector("#count").value = val;
+        }
+        function countDown() {
+            document.querySelector("#count").value--;
+        }
+        if (a == b) {
+
+        }
+    </script>
+    <a href=""></a>
+</body>
+
+</html>
