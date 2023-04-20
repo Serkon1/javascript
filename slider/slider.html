@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .slider {
+            max-width: 100%;
+            overflow: hidden;
+            --pos: 0;
+        }
+
+
+        .slider1 {
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .slider2 {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .slider img {
+            max-width: 100%;
+        }
+
+        .slider:not(.init) .slide+.slide {
+            display: none;
+        }
+
+        .slider_items {
+            width: calc(var(--w) * var(--l) * 1px);
+            height: 300px;
+            display: flex;
+            /* position: ; */
+            transform: translateX(calc(var(--pos) * var(--w) * -1px));
+            transition: all ease 0.3s;
+        }
+
+        .slide {
+            width: calc(var(--w) * 1px);
+        }
+
+        .slide img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        /* .slider.init img+img {
+            display: block;
+        } */
+    </style>
+    <script src="./slider.js"></script>
+</head>
+
+<body>
+    <div class="slider1 slider">
+        <img src="./img/auto1.png" alt="" class="slide">
+        <img src="./img/auto2.png" alt="" class="slide">
+        <img src="./img/auto3.png" alt="" class="slide">
+        <img src="./img/auto4.png" alt="" class="slide">
+        <button class="slider_prev">&lt;</button>
+        <button class="slider_next">&gt;</button>
+    </div>
+    <button onclick=" slider.setPosition(0) ">1</button>
+    <button onclick=" slider.setPosition(1) ">2</button>
+    <button onclick=" slider.setPosition(2) ">3</button>
+    <button onclick=" slider.setPosition(3) ">4</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="slider2 slider">
+        <img src="./img/auto1.png" alt="" class="slide">
+        <img src="./img/auto2.png" alt="" class="slide">
+        <img src="./img/auto3.png" alt="" class="slide">
+        <img src="./img/auto4.png" alt="" class="slide">
+        <button class="slider_prev">&lt;</button>
+        <button class="slider_next">&gt;</button>
+    </div>
+
+    <!-- <div class="slider1 slider">
+        <img src="./img/auto1.png" alt="" class="slide">
+        <img src="./img/auto2.png" alt="" class="slide">
+        <img src="./img/auto3.png" alt="" class="slide">
+        <img src="./img/auto4.png" alt="" class="slide">
+        <button class="slider_prev">&lt;</button>
+        <button class="slider_next">&gt;</button>
+    </div> -->
+</body>
+
+</html>
