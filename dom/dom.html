@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myblock {
+            width: 20mm;
+            height: 20mm;
+            background: rgb(66, 136, 100);
+            color: white;
+            display: inline-block;
+            /* line-height: 20mm; */
+            display: inline-flex;
+
+        }
+
+        .centered {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #block1 {
+            border-radius: 50%;
+            padding: 2mm;
+        }
+
+        #block2 {
+            background: red;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 2mm;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .input_active {
+            box-shadow: 0 0 10px #000;
+        }
+    </style>
+    <script src="dom.js"></script>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="myblock" id="block1"></div>
+        <div class="myblock" id="block2"></div>
+    </div>
+
+    <button class="showNext">Показать блок</button>
+    <div class="hidden">
+        Много много букав
+    </div>
+
+    <p>
+        <a href="/home">Home</a>
+    </p>
+    <p>
+        <a href="/contact">Contacts</a>
+    </p>
+    <p>
+        <a href="http://ya.ru">Yandex</a>
+    </p>
+    <p>
+        <a href="http://google.ru">Google</a>
+    </p>
+    <p>
+        <input type="text" id="input0" onclick="console.log('input clicked')">
+        <span id="inp0val"></span>
+    </p>
+
+</body>
+
+</html>
